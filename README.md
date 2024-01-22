@@ -54,31 +54,34 @@ ________________________________________________________________________________
 
 
 
-// if for example :     MessageBox(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
-// if its going to print for us "OrcaRootki$ is Dead" We Will intercept it halfway like "MITM Attack"
-   Then Were going to change that message And We make a Hook for him from "OrcaRootki$ is Dead" to 
-   "OrcaRootki$ is Great"  // thats the hook 
+if for example :     MessageBox(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
+if its going to print for us "OrcaRootki$ is Dead" We Will intercept it halfway like "MITM Attack"
+Then Were going to change that message And We make a Hook for him from "OrcaRootki$ is Dead" to 
+"OrcaRootki$ is Great"  // thats the hook 
 
 
 
 
-// for exmple : 
+for exmple : 
 
-// MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
-// we will put MessageBoxA in gpMessageBoxA for hooking 
-   typedef BOOL(WINAPI* FnMessageBoxA)(HWND, LPCSTR, LPCSTR, UINT);                     // A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function
-   FnMessageBoxA gpMessageBoxA = MessageBoxA;                                           // The original function pointer, gpMessageBoxA, is declared and initialized with the MessageBoxA function
-//
-// nice 
-//
-// The function that will run instead MessageBoxA when hooked || // will take the place of the MessageBoxA
-// MyHookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)          // The hook function, MyHookedMessageBoxA, is defined. This function will intercept calls to MessageBoxA and provide custom behavior
-//
-// Now We're going to grab our fake or The Hooked Function "MyHookedMessageBoxA" And we're going to make it the real Function 
-// Then we'll have hooking for MessageBoxA and our function will take its place "MyHookedMessageBoxA"
-//
-// Running MyHookedMessageBoxA instead of gpMessageBoxA that is MessageBoxA
-	 DetourAttach((PVOID)&gpMessageBoxA, MyHookedMessageBoxA));
+MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
+we will put MessageBoxA in gpMessageBoxA for hooking 
+
+A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function :
+typedef BOOL(WINAPI* FnMessageBoxA)(HWND, LPCSTR, LPCSTR, UINT);
+The original function pointer, gpMessageBoxA, is declared and initialized with the MessageBoxA function :
+FnMessageBoxA gpMessageBoxA = MessageBoxA;
+
+nice 
+
+The function that will run instead MessageBoxA when hooked || // will take the place of the MessageBoxA
+MyHookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)          // The hook function, MyHookedMessageBoxA, is defined. This function will intercept calls to MessageBoxA and provide custom behavior
+
+Now We're going to grab our fake or The Hooked Function "MyHookedMessageBoxA" And we're going to make it the real Function 
+Then we'll have hooking for MessageBoxA and our function will take its place "MyHookedMessageBoxA"
+
+Running MyHookedMessageBoxA instead of gpMessageBoxA that is MessageBoxA :
+	DetourAttach((PVOID)&gpMessageBoxA, MyHookedMessageBoxA));
 	
 	
 	
