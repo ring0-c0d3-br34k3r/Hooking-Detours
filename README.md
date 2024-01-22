@@ -87,13 +87,18 @@ Then Were going to change that message And We make a Hook for him from "OrcaRoot
 
 
 
-The function that will run instead MessageBoxA when hooked || // will take the place of the MessageBoxA
-MyHookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)          // The hook function, MyHookedMessageBoxA, is defined. This function will intercept calls to MessageBoxA and provide custom behavior
+- The function that will run instead MessageBoxA when hooked || will take the place of the MessageBoxA
+- The hook function, MyHookedMessageBoxA, is defined. This function will intercept calls to MessageBoxA and provide custom behavior :
+  
+  MyHookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)         
 
-Now We're going to grab our fake or The Hooked Function "MyHookedMessageBoxA" And we're going to make it the real Function 
-Then we'll have hooking for MessageBoxA and our function will take its place "MyHookedMessageBoxA"
 
-Running MyHookedMessageBoxA instead of gpMessageBoxA that is MessageBoxA :
+
+- Now We're going to grab our fake or The Hooked Function "MyHookedMessageBoxA" And we're going to make it the real Function Then
+  we'll have hooking for MessageBoxA and our function will take its place "MyHookedMessageBoxA"
+
+- Running MyHookedMessageBoxA instead of gpMessageBoxA that is MessageBoxA :
+  
 	DetourAttach((PVOID)&gpMessageBoxA, MyHookedMessageBoxA));
 	
 	
