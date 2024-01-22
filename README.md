@@ -71,16 +71,16 @@ Then Were going to change that message And We make a Hook for him from "OrcaRoot
 
 
 
-for exmple : 
+- for exmple : 
 
 MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
 
-we will put MessageBoxA in gpMessageBoxA for hooking 
+- we will put MessageBoxA in gpMessageBoxA for hooking 
 
-A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function :
+- A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function : 
 typedef BOOL(WINAPI* FnMessageBoxA)(HWND, LPCSTR, LPCSTR, UINT);
 
-The original function pointer, gpMessageBoxA, is declared and initialized with the MessageBoxA function :
+- The original function pointer, gpMessageBoxA, is declared and initialized with the MessageBoxA function :
 FnMessageBoxA gpMessageBoxA = MessageBoxA;
 
 nice 
