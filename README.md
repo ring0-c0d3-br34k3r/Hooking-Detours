@@ -112,7 +112,7 @@ ________________________________________________________________________________
   the original function. This level of control opens up possibilities 
   for advanced debugging, behavior analysis, and security research
 	
-- It is a powerful technique, if misused "For Malware Dev"
+  It is a powerful technique, if misused "For Malware Dev"
 	
 	
 	
