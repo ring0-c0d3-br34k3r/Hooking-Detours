@@ -29,7 +29,7 @@ ________________________________________________________________________________
 
 # Hooking using Detours Library :
 
-                Detours Library GitHub Link : https://github.com/microsoft/Detours
+                    Detours Library GitHub Link : https://github.com/microsoft/Detours
 ======================================================================================================
 1 - DetourTransactionBegin     // https://github.com/microsoft/Detours/wiki/DetourTransactionBegin  
 // - Begin a new transaction for attaching or detaching detours. This function should be called first 
