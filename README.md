@@ -55,6 +55,7 @@ ________________________________________________________________________________
 
 
 if for example :     MessageBox(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
+
 if its going to print for us "OrcaRootki$ is Dead" We Will intercept it halfway like "MITM Attack"
 Then Were going to change that message And We make a Hook for him from "OrcaRootki$ is Dead" to 
 "OrcaRootki$ is Great"  // thats the hook 
