@@ -54,6 +54,14 @@ ________________________________________________________________________________
 
 
 
+
+
+
+
+
+
+
+
 if for example :     MessageBox(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
 
 if its going to print for us "OrcaRootki$ is Dead" We Will intercept it halfway like "MITM Attack"
