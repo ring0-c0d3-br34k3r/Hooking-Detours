@@ -31,8 +31,8 @@ ________________________________________________________________________________
 
                     Detours Library GitHub Link : https://github.com/microsoft/Detours
 ======================================================================================================
-1 - DetourTransactionBegin     // https://github.com/microsoft/Detours/wiki/DetourTransactionBegin  
-// - Begin a new transaction for attaching or detaching detours. This function should be called first 
+1 - DetourTransactionBegin      https://github.com/microsoft/Detours/wiki/DetourTransactionBegin  
+  - Begin a new transaction for attaching or detaching detours. This function should be called first 
      when hooking and unhooking.
 ======================================================================================================
 2 - DetourUpdateThread         // https://github.com/microsoft/Detours/wiki/DetourUpdateThread
