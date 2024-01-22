@@ -73,7 +73,7 @@ Then Were going to change that message And We make a Hook for him from "OrcaRoot
 
 - for exmple : 
 
-  MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
+    MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNING);
 
 - we will put MessageBoxA in gpMessageBoxA for hooking 
 
