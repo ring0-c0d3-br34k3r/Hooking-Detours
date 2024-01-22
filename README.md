@@ -1,7 +1,7 @@
 # API-Hooking-Detours
 
 
-+++++++++++++++++++++++ API Hooking in Malware? +++++++++++++++++++++++++++++++++++++
+API Hooking in Malware? 
 
 Malware authors may use API Hooking techniques to intercept API function 
 calls in order to gain control over a target system and perform unauthorized 
@@ -9,10 +9,8 @@ activities. By hooking key API functions, malware can manipulate data, monitor
 user actions, bypass security mechanisms, and perform other malicious actions 
 without the user’s knowledge or consent.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=====================================================================================
-=====================================================================================
-+++++++++++++++++++++++ Detours API Hooking +++++++++++++++++++++++++++++++++++++++++
+
+Detours API Hooking 
 
 "Detours is a library to intercept arbitrary Win32 binary functions on x86 machines. 
 The interception code is applied dynamically at runtime. Convolutive methods replace 
@@ -26,7 +24,7 @@ Note :
       this is sort of the way that was demonstrated above, albeit in a more 
 	    sophisticated and elegant way. The function that drives all of this is 
 	    the function.DetourAttach(…)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+___________________________________________________________________________________
 
 
 # Hooking using Detours Library :
