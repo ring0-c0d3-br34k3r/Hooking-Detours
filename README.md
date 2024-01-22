@@ -30,25 +30,25 @@ ________________________________________________________________________________
 # Hooking using Detours Library :
 
                     Detours Library GitHub Link : https://github.com/microsoft/Detours
-1 - DetourTransactionBegin        https://github.com/microsoft/Detours/wiki/DetourTransactionBegin  
+1 - DetourTransactionBegin              https://github.com/microsoft/Detours/wiki/DetourTransactionBegin  
   - Begin a new transaction for attaching or detaching detours. This function should be called first 
     when hooking and unhooking.
 
-2 - DetourUpdateThread            https://github.com/microsoft/Detours/wiki/DetourUpdateThread
+2 - DetourUpdateThread                  https://github.com/microsoft/Detours/wiki/DetourUpdateThread
   - Update the current transaction. This is used by Detours library to Enlist a thread in the current 
     transaction || The current thread is updated with DetourUpdateThread(GetCurrentThread()).
 
-3 - DetourAttach                  https://github.com/microsoft/Detours/wiki/DetourAttach
+3 - DetourAttach                        https://github.com/microsoft/Detours/wiki/DetourAttach
   - Install the hook on the target function in a current transaction. This won't be committed until  
      is called.DetourTransactionCommit || The hook function is attached to the original function 
      using DetourAttach() with the function pointer and the hook function as parameters
 
-4 - DetourDetach                  https://github.com/microsoft/Detours/wiki/DetourDetach
+4 - DetourDetach                        https://github.com/microsoft/Detours/wiki/DetourDetach
   - Remove the hook from the targetted function in a current transaction. This won't be committed 
      until  is called.DetourTransactionCommit || The hook function is detached from the original 
      function using DetourDetach()
 
-5 - DetourTransactionCommit       https://github.com/microsoft/Detours/wiki/DetourTransactionCommit
+5 - DetourTransactionCommit             https://github.com/microsoft/Detours/wiki/DetourTransactionCommit
   - Commit the current transaction for attaching or detaching detours.
 
 
