@@ -12,6 +12,11 @@ user actions, bypass security mechanisms, and perform other malicious actions
 without the user’s knowledge or consent.
 
 
+Hooking with Detours is a bit like giving your malicious creation a sneaky makeover. Essentially, it allows you to manipulate the normal flow of a program, redirecting it to execute your own nefarious code.
+
+In the realm of malware, this can be used for all sorts of mischiefâ€”stealing sensitive information, bypassing security measures, or even turning innocent software into unwitting accomplices. It's like dressing up your code in a disguise and making it perform actions that the user didn't sign up for.
+
+
 Detours API Hooking : 
 
 "Detours is a library to intercept arbitrary Win32 binary functions on x86 machines. 
