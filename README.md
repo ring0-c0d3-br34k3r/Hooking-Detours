@@ -77,13 +77,15 @@ MessageBoxA(NULL, "OrcaRootki$ is Dead", "Original MsgBox", MB_OK | MB_ICONWARNI
 
 - we will put MessageBoxA in gpMessageBoxA for hooking 
 
-- A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function : 
-typedef BOOL(WINAPI* FnMessageBoxA)(HWND, LPCSTR, LPCSTR, UINT);
+- A function pointer type, FnMessageBoxA, is defined to match the signature of the original MessageBoxA function :
+  
+  typedef BOOL(WINAPI* FnMessageBoxA)(HWND, LPCSTR, LPCSTR, UINT);
 
 - The original function pointer, gpMessageBoxA, is declared and initialized with the MessageBoxA function :
-FnMessageBoxA gpMessageBoxA = MessageBoxA;
+  
+  FnMessageBoxA gpMessageBoxA = MessageBoxA;
 
-nice 
+
 
 The function that will run instead MessageBoxA when hooked || // will take the place of the MessageBoxA
 MyHookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)          // The hook function, MyHookedMessageBoxA, is defined. This function will intercept calls to MessageBoxA and provide custom behavior
