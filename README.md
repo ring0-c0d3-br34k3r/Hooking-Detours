@@ -101,24 +101,25 @@ Then Were going to change that message And We make a Hook for him from "OrcaRoot
   
 	DetourAttach((PVOID)&gpMessageBoxA, MyHookedMessageBoxA));
 	
-	
-	
-	
-//  Intercept and modify the MessageBoxA function is DONE
-
-//  The API Hooking can be leveraged to intercept MessageBoxA calls, 
-//  print message details, and even modify parameters before calling 
-//	the original function. This level of control opens up possibilities 
-//	for advanced debugging, behavior analysis, and security research
-	
-//	It is a powerful technique, if misused "For Malware Dev"
-	
-	
-	
+___________________________________________________________________________________
 
 
+___________________________________________________________________________________
+  Intercept and modify the MessageBoxA function is DONE
 
-Happy Hacking
+  The API Hooking can be leveraged to intercept MessageBoxA calls, 
+  print message details, and even modify parameters before calling 
+  the original function. This level of control opens up possibilities 
+  for advanced debugging, behavior analysis, and security research
+	
+- It is a powerful technique, if misused "For Malware Dev"
+	
+	
+	
+
+
+
+- Happy Hacking
 
 
 
